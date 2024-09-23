@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="console.log('La página se ha cargado completamente');">
+    <h2>Practica de JavaScript- Eventos y salidas</h2>
+    <p>
+        A partir del siguiente codigo busca que hace falta para que se ejecute correctamente:
+    </p>
+    <p><b> 1.Primer ejercicio: </b> El elemento div debe volverse rojo cuando alguien mueve el mouse sobre él.</p>
+    <div onmouseover="this.style.backgroundColor='red'">Div que cambia de color</div>
+    <p><b>2.Segundo Ejercicio: </b>Escribe la solucion de la suma en el siguiente parrafo</p>
+    <p id="mostrarSuma"></p>
+    <script>
+    document.getElementById("mostrarSuma").innerText = 5 + 6;
+    </script>
+    <p><b>3.Tercer ejercicio: </b>al darle click muestra la fecha y la hora actual en un parrafo</p>
+    <button onclick="document.getElementById('mostrarHora').innerText=Date()">¿Que hora es?</button>
+    <p id="mostrarHora"></p>
+
+
+    <p ondblclick="document.getElementById('mostrarTexto').innerText='texto visible'"  > <b> 4.Cuarto ejercicio:</b> al hacer doble click mostrar un texto</p>
+    <p id="mostrarTexto"></p>
+
+
+    <p><b>5.Quinto ejercicio:</b> cambiar el color del siguiente texto cuando se pasa el mouse por encima y cuando se quite vuelva a su color inicial</p>
+    <h1 onmouseover="style.color='red'" onmouseleave="style.color='black'">Pasa el mouse por este texto</h1>
+
+
+</body>
+</html>
