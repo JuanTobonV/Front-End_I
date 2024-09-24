@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body{
+            background-color: white;
+            color: black;
+        }
+
+        .oscuro{
+            color: white;
+            background-color: black;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>
+        Prueba del modo oscuro
+    </h1>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quos aperiam excepturi provident pariatur! Quia, officiis dicta. Velit, aliquid mollitia, dicta eos quae excepturi reprehenderit labore a quod eum voluptatum quis, nemo nesciunt similique facilis vel eligendi facere dolor modi impedit? Quidem debitis dicta quibusdam iure suscipit autem dignissimos cumque!
+
+    </p>
+
+    <button type="button" id = "modo"> Modo Oscuro</button>
+
+
+    <script>
+
+        //Esta es la forma más recomendada de agregar eventos a las etiquetas de HTML ya que permite
+        //agregar multiples eventos al mismo elemento, sin perder o sobreescribir los existentes.
+
+        //Metodo de llamada, debe de tener 2 parametros: 'tipo de evento', function(){}
+
+        //function(){} <- Función anonima
+
+        document.getElementById('modo').addEventListener('click', function(){
+            let elemento = document.body;
+
+            //En una variable estoy almacenando al body del doc.
+
+            elemento.classList.toggle('oscuro')
+
+
+            /*
+            
+                classList: Es una propiedad del DOM que permite agregar, eliminar, alternar y verificar 
+                la existencia de clases sin tener que manipular directamente la propiedad className,
+                lo que facilita el manejo de las clases de un elemento.
+
+
+                toggle: Es el metodo que permite alternar una clase manipulada por medio de classList,
+                es decir, si la clase especificada ya está presente en el elemento, se elimina, sino está presente,
+                se agrega.
+            
+            
+            */
+        })
+    </script>
+</body>
+</html>
