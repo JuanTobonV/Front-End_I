@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Calculadora básica con HTML y JS</h1>
+
+    <form action="">
+        <!-- Paso 1: Crear todo el HTML necesario. -->
+
+        <label for=""> Número 1: </label> <br><br>
+
+        <input type="number" id="numero1" placeholder="Ingrese el primer número: ">
+        <br><br>
+
+        <label for="">Operación:</label> <br><br>
+
+        <select name="" id="operacion">
+            <option value="1">Sumar</option>
+            <option value="2">Restar</option>
+            <option value="3">Multiplicar</option>
+            <option value="4">Dividit</option>
+        </select>
+
+        <br><br>
+
+        <label for="">Número 2:</label>
+        <br><br>
+        <input type="number" name="" id="numero2" placeholder="Ingrese el segundo número:">
+        <br><br>
+        <input type="button" value="Calcular" onclick="calculadora()">
+    </form>
+
+    <p id="resultado"></p>
+
+    <!-- Paso 2: Vamos a darle id a los elementos que necesitamos llamar desde JS -->
+
+    <!-- Paso 3: Asignar el evento con la función() -->
+
+    <script src="./js/clase6.js"></script>
+</body>
+</html>

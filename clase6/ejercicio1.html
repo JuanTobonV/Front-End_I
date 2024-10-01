@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    main{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    section{
+        width: 60%;
+       
+    }
+
+    
+
+   
+</style>
+<body>
+
+    <main>
+
+        
+       
+        
+        <section>
+           
+            <div style="border: 1px solid black; padding: 150px 90px 100px 90px; border-radius: 20px; display: flex; justify-content: center; flex-grow: 1;">
+                
+                
+                
+                <form action="">
+
+                    <p style="color: black; text-align: center; margin: 0px; font-size: 2rem;" id="resultado" onchange="viewCurrency()"></p>
+
+                    <div style="margin-top: 40px;">
+                        <input id="valor1" style="width: 700px; margin-bottom: 10px;" type="text">
+    
+                        <select name="" id="currency"  >
+                            <option value="1">Euros a COP</option>
+                            <option value="2">COP a Euros</option>
+                        </select>
+                    </div>
+
+                    <div style="display: flex; justify-content: center;; margin-top: 10px; gap: 10px;">
+                                  
+                            <input type="button" value="Calcular" onclick="viewCurrency()">
+                            <input type="reset" value="Limpiar">
+                       
+
+                    </div>
+
+                    
+                    
+                   
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/ejercicio.js"></script>
+    
+</body>
+</html>
