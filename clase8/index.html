@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Front-End I</title>
+
+    <link rel="stylesheet" href="./stylesheet.css">
+</head>
+<body>  
+
+    <main>
+        <section class="ejercicio">
+            <h1 class="mainTitle">
+                Primer Ejercicio
+            </h1>
+        
+            <form action="">
+                <input id="valorVelocidad" type="text" placeholder="Ingrese la velocidad (km/h)">
+                <input type="button" value="Calcular" onclick="calcularVelocidad()">
+        
+                <section>
+                    <ul>
+                        <li id="respuestaMetrosHora"></li>
+                        <li id="respuestaMillasHora"> </li>
+                    </ul>
+                </section>
+                
+            </form>
+
+        </section >
+
+
+        <section class="ejercicio">
+
+            <h1 class="mainTitle">
+                Segundo Ejercicio
+            </h1>
+        
+            <form action="">
+                <input id="duracionLlamada" type="text" placeholder="Ingrese la duración de su llamada (En minutos)">
+                <input type="button" value="Calcular" onclick="calcularCosteLlamada()">
+        
+                <section>
+                    <ul>
+                        <li id="respuestaCosteLlamada"></li>
+                        
+                    </ul>
+                </section>
+            
+            </form>
+
+        </section >
+
+        <section class="ejercicio">
+
+            <h1 class="mainTitle">
+                Tercer Ejercicio
+            </h1>
+        
+            <form action="">
+                <section style="display: flex; flex-direction: column; margin-top: 10px; gap: 6px;">
+
+                
+                    <input id="temperaturaCelcius" type="text" placeholder="Ingrese la temperatura en Celcius">
+                    
+                    <input id="temperaturaFarenheit" type="text" placeholder="Ingrese la temperatura en Fahrenheit">
+
+                    <input type="button" value="Celcius a Fahrenheit" onclick="conversorTemperaturaCelsiusToFarenheit()">
+
+                    <input type="button" value="Fahrenheit a Celcius " onclick="conversorTemperaturaFarenheitToCelsius()">
+
+                    
+                    
+
+                </section>
+        
+                <section>
+                    <ul>
+                        <li id="mensajeTemperatura"></li>
+                        
+                    </ul>
+                </section>
+            
+            </form>
+
+        </section >
+
+        <section class="ejercicio">
+
+            <h1 class="mainTitle">
+                Cuarto Ejercicio
+            </h1>
+        
+            <form style="display: flex; flex-direction: column; gap: 5px" action="">
+                <input id="estaturaUsuario" type="text" placeholder="Ingrese su estatura">
+                <input id="pesoUsuario" type="text" placeholder="Ingrese su peso">
+
+
+                <input type="button" value="Calcular" onclick="calcularIMC()">
+        
+                <section>
+                    <ul>
+                        <li id="respuestaIMC"></li>
+                        
+                    </ul>
+                </section>
+            
+            </form>
+
+        </section >
+    
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+</html>
