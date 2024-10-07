@@ -44,68 +44,46 @@ function calcularCosteLlamada(){
 
 }
 
-function conversorTemperaturaCelsiusToFarenheit(){
-
+function conversorTemperaturaCelsiusToFarenheit() {
     const temperaturaCelcius = Number(document.getElementById('temperaturaCelcius').value);
-
     let celciusToFarenheit = (temperaturaCelcius * 1.8) + 32;
 
-    console.log(celciusToFarenheit)
+    console.log(celciusToFarenheit);
 
-
-    if ( (celciusToFarenheit < 32) ){
-        document.querySelector('#mensajeTemperatura').innerText = 'Nos congelamos'
+    if (celciusToFarenheit < 32) {
+        document.querySelector('#mensajeTemperatura').innerText = 'Nos congelamos';
+    } 
+    else if (celciusToFarenheit >= 32 && celciusToFarenheit <= 50) {
+        document.querySelector('#mensajeTemperatura').innerText = 'Está haciendo frio';
+    } 
+    else if (celciusToFarenheit >= 51 && celciusToFarenheit <= 77) {
+        document.querySelector('#mensajeTemperatura').innerText = 'Está templado el día';
+    } 
+    else {
+        document.querySelector('#mensajeTemperatura').innerText = 'Hace calor';
     }
-    else if( 33 <= celciusToFarenheit <= 50 ){
-    
-        document.querySelector('#mensajeTemperatura').innerText = 'Está haciendo frio'
-
-    }
-    else if( 51 <= celciusToFarenheit <= 77){
-        
-
-        document.querySelector('#mensajeTemperatura').innerText = 'Está templado el día'
-
-    }
-    else if(celciusToFarenheit > 77){
-        document.querySelector('#mensajeTemperatura').innerText = 'Tiene fiebre o es el apocalipsis';
-
-    }
-
-
-
 }
 
-function conversorTemperaturaFarenheitToCelsius(){
-
+function conversorTemperaturaFarenheitToCelsius() {
     const temperaturaFarenheit = Number(document.getElementById('temperaturaFarenheit').value);
+    let farenheitToCelsius = (temperaturaFarenheit - 32) / 1.8;
 
-    let farenheitToCelcius = (temperaturaFarenheit * 1.8) + 32;
+    console.log(farenheitToCelsius);
 
-    console.log(farenheitToCelcius)
-
-
-
-    if ( (farenheitToCelcius < 0) ){
-        document.querySelector('#mensajeTemperatura').innerText = 'Nos congelamos'
+    if (farenheitToCelsius < 0) {
+        document.querySelector('#mensajeTemperatura').innerText = 'Nos congelamos';
+    } 
+    else if (farenheitToCelsius >= 0 && farenheitToCelsius <= 10) {
+        document.querySelector('#mensajeTemperatura').innerText = 'Está haciendo frio';
+    } 
+    else if (farenheitToCelsius >= 11 && farenheitToCelsius <= 25) {
+        document.querySelector('#mensajeTemperatura').innerText = 'Está templado el día';
+    } 
+    else {
+        document.querySelector('#mensajeTemperatura').innerText = 'Hace calor';
     }
-    else if( 0 <= farenheitToCelcius <= 15 ){
-    
-        document.querySelector('#mensajeTemperatura').innerText = 'Está haciendo frio'
-
-    }
-    else if( 16 <= farenheitToCelcius <= 25){
-        
-
-        document.querySelector('#mensajeTemperatura').innerText = 'Está templado el día'
-
-    }
-    else{
-        document.querySelector('#mensajeTemperatura').innerText = 'Tiene fiebre o es el apocalipsis';
-
-    }
-
 }
+
 
 function calcularIMC(){
     const altura = Number(document.getElementById('estaturaUsuario').value);
