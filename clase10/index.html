@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 10</title>
+</head>
+<body>
+
+    <h1>
+        Array en JS
+    </h1>
+
+    <p>
+        Es una colección de datos dentro de una misma variable o constante.
+    </p>
+
+    <h1>Objetos en JS</h1>
+
+    <p>
+        Tambien es una colección de datos que se guardan en forma clave:valor,
+    </p>
+
+    <h3>Ejercicio sobre arreglos y objetos dinámicos</h3>
+
+    <script>
+        //let frutas = [];
+
+        //1. Preguntar cuantas frutas desea guardar
+
+        /*let cantidad = Number(prompt('Ingrese la cantidad de frutas que desea guardar: '))
+
+        //2. Crear un ciclo for
+
+        for(let i = 0; i < cantidad;i++){
+            frutas[i] = prompt(`Ingrese el nombre de la fruta #${i}:`)
+            document.write("Fruta: " + frutas[i] + "<br>")
+        }
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //Objetos dinámicos
+        document.write("Objetos dinámicos" + "<br>");
+
+        let empleados = {
+            nombre: "",
+            edad: "",
+            profesion: "",
+        }
+
+        for (let key in empleados) {
+            empleados[key] = prompt("Ingrese su " +key);
+            document.write(key + ":" + empleados[key] + "<br>")
+
+        } */
+
+        let compra = {
+            "nombre" : [],
+            "cantidad": [],
+            "precio": [],
+        }
+
+        let cantidadProducto = Number(prompt("¿Cuantos productos vas a comprar?"))
+
+        let total = 0;
+
+        for(let i = 0; i < cantidadProducto; i++){
+
+            
+
+        
+            for (const key in compra) {
+
+                let precioProducto = 0;
+
+                compra[key][i] = prompt(`Ingrese ${key} del producto #${i+1}`);
+
+            }
+
+            
+
+            document.write("------------------------------------<br>")
+
+        }
+
+        
+    
+        
+
+    </script>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
