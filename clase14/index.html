@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Manipulación de datos con LocalStorage
+    </h1>
+    <p>
+        LocalStorage es una herramienta compatible con html y los navegadores, gracias a esta herrmienta podemos
+        almacenar de manera local datos en el navegador que quedará almacenada para que siempre qu el usuario
+        inicie en su navegador estos datos esten ahí. LocalStorage trabaja de manera similar con las cookies, sin embargo,
+        cuenta con un espacio de 5mb y al trabajar de manera local no necesita hacer peticiones al servidor.
+    </p>
+
+    <h3>¿Cómo se utiliza LocalStorage</h3>
+    <p>
+        LocalStorage es una herramienta que se utiliza via Javascript. Para acceder a este almacenamiento se hace:
+
+        Una vez ejecutada la aplicación
+            1. Inspeccionar
+            2. apartado de application
+            3. en el menu izquierdo aparece el LocalStorage
+    </p>
+
+    <h3>
+        Metodos del LocalStorage
+    </h3>
+
+    <p>
+        1. LocalStorage.setItem("clave", valor) -> este es el metodo para almacenar información en nuestro LocalStorage. En el primer
+        parametro "clave" es donde ingresamos el nombre del elemento y en el valor va el dato que almacenará el parametro clave
+    </p>
+
+    <script>
+        localStorage.setItem("nombre", "Maria")
+    </script>
+
+
+    <p>
+        localStorage.getItem("clave") -> Este metodo me sirve para traer el valor almacenado en una clave especifica
+    </p>
+
+    
+    
+    <script>
+        
+        console.log(localStorage.getItem("nombre"))
+
+    </script>
+
+    <h2>Intercambio de datos por medio de JSON</h2>
+    <p>
+        Para poder almacenar arreglos y objetos en el localStorage se debe de convertir en un string, para ello usaremos JSON
+        <br>
+
+        <strong>
+            JSON.stringify()
+        </strong>
+    </p>
+
+    <script>
+        let persona = {
+            id: 123,
+            nombre: "David",
+            apellido: "Rios",
+            edad: 34
+        }
+
+        localStorage.setItem("Persona1", JSON.stringify(persona))
+        console.log(localStorage.getItem("Persona1"))
+    </script>
+
+    <p>
+        Convertir un String almacenado en el localStorage en un objeto: JSON.parse(string)
+
+    </p>
+
+    <script>
+        let persona21 = JSON.parse(localStorage.getItem("Persona1"))
+        console.log(persona21)
+    </script>
+
+    <script>
+        let cedula = prompt('Ingrese la celuda')
+        let nombre = prompt('Ingrese el nombre')
+        let apellido = prompt('Ingrese apellido')
+
+        let personaEjercicio = {
+            cedula: cedula,
+            nombre: nombre,
+            apellido: apellido
+        }
+
+        stringifyObject = JSON.stringify(personaEjercicio);
+
+        localStorage.setItem("persona#1", stringifyObject)
+
+        console.log(personaEjercicio.cedula + " " + personaEjercicio.nombre)
+    </script>
+</body>
+</html>
