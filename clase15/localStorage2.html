@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        localStorage.setItem("nombre", "Maria")
+    </script>
+
+    <script>
+        let persona = {
+            id: 123,
+            nombre: "David",
+            apellido: "Rios",
+            edad: 34
+        }
+
+        // localStorage.setItem("Persona1", JSON.stringify(persona))
+        // console.log(localStorage.getItem("Persona1"))
+    </script>
+
+    <h3>Eliminar elementos del localStorage</h3>
+
+    <p>Se usa el metodo removeItem('') y recibe la clave de elemento que queremos eliminar:
+        <br>
+        <strong>
+            localStorage.removeItem('');
+    
+        </strong>   
+     </p>
+
+     <script>
+        // localStorage.removeItem('nombre')
+     </script>
+
+     <h3>Limpiar todo el localStorage</h3>
+     <p>
+        Para limpiar todo lo que existe en el almacenamiento se hace uso del metodo:
+        <br>
+
+        <strong>localStorage.clear();</strong>
+     </p>
+
+     <!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+</body>
+</html>
