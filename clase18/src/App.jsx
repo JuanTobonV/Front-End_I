@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+
+import './App.css'
 //Importamos React por que es necesario para escribir componentes en JSX
 //useState: importamos este Hook de react para manejar el estado dentro de los componentes funcionales, para que nos permita crear variables de estado, que pueden cambiar durante el ciclo de vida del componente
 
@@ -60,25 +62,29 @@ function App()
     return(
       <>
 
-        <h1>Lista de tareas con REACT</h1>
-        <input type="text" value={tasksInput}
-         onChange={(userInput) => setTasksInput(userInput.target.value)} placeholder="Escribe una tarea" 
-         />
-
-         <button onClick={addTasks}>Agregar Tarea</button>
-
-         <ul>
-          
-          {
-            tasks.map((task, index) => {
-              return(
-                <li key={index}>
-                  {task}
-                  <button onClick={()=>deleteTask(index)}>Eliminar</button>
-                </li>)
-            })
-          }
-         </ul>
+        <div className="container">
+          <h1>Lista de tareas con react</h1>
+          <div className="container__input">
+            <input type="text" value={tasksInput}
+             onChange={(userInput) => setTasksInput(userInput.target.value)} placeholder="Escribe una tarea" 
+             />
+    
+             <button className="addTask" onClick={addTasks}>Agregar Tarea</button>
+          </div>
+  
+           <ul>
+            
+            {
+              tasks.map((task, index) => {
+                return(
+                  <li key={index}>
+                    {task}
+                    <button className="deleteTask" onClick={()=>deleteTask(index)}>Eliminar</button>
+                  </li>)
+              })
+            }
+           </ul>
+        </div>
       
       </>
     )

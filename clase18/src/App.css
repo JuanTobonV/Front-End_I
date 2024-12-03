@@ -1,42 +1,84 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+
+*{
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body{
+  font-family: "Nunito", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-color: #c5e4ff;
+  
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container{
+  background-color: white;
+  padding: 90px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  gap: 20px;
+  -webkit-box-shadow: 0px 0px 22px -13px rgba(8,8,8,1);
+  -moz-box-shadow: 0px 0px 22px -13px rgba(8,8,8,1);
+  box-shadow: 0px 0px 22px -13px rgba(8,8,8,1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.container h1{
+  margin: 0;
 }
 
-.card {
-  padding: 2em;
+.container__input{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.read-the-docs {
-  color: #888;
+.container__input input{
+  height: 30px;
+  width: 220px;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+}
+
+li input{
+  width: 50%;
+}
+
+button{
+  padding: 8px;
+  border: none;
+  background-color: #4a91e2d7;
+
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition:  0.2s;
+  width: 120px;
+}
+
+button:hover{
+  background-color: #3f72add7;
+}
+
+input{
+  padding-left: 3px;
 }
